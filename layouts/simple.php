@@ -8,8 +8,8 @@
 ?>
 <div id="youtube-comments-to-wp" class="p_youtubecommentstowp">
   <?php foreach ($all_comments as $c): ?>
-    <a class="p_youtubecommentstowp__link" href="https://www.youtube.com/watch?v=<?php echo esc_attr($c['video_id']); ?>" target="_blank" rel="noopener noreferrer"></a>
     <div class="p_youtubecommentstowp__row">
+      <a class="p_youtubecommentstowp__link" href="https://www.youtube.com/watch?v=<?php echo esc_attr($c['video_id']); ?>" target="_blank" rel="noopener noreferrer"></a>
       <div class="p_youtubecommentstowp__toplevel">
         <div class="p_youtubecommentstowp__comment">
           <?php if (!empty($c['author_icon'])): ?>

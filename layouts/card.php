@@ -1,7 +1,7 @@
 <div id="youtube-comments-to-wp" class="p_youtubecommentstowp_fukidashi">
   <?php foreach ($all_comments as $c): ?>
-    <a class="p_youtubecommentstowp_fukidashi__link" href="https://www.youtube.com/watch?v=<?php echo esc_attr($c['video_id']); ?>" target="_blank" rel="noopener noreferrer"></a>
     <div class="p_youtubecommentstowp_fukidashi__row">
+      <a class="p_youtubecommentstowp_fukidashi__link" href="https://www.youtube.com/watch?v=<?php echo esc_attr($c['video_id']); ?>" target="_blank" rel="noopener noreferrer"></a>
       <div class="p_youtubecommentstowp_fukidashi__comment">
         <div class="p_youtubecommentstowp_fukidashi__meta">
           <?php if (!empty($c['author_icon'])): ?>
