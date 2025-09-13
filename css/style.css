@@ -1,0 +1,275 @@
+#youtube-comments-to-wp.p_youtubecommentstowp .p_youtubecommentstowp__head {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
+  margin-bottom: 5px;
+  position: relative;
+}
+#youtube-comments-to-wp.p_youtubecommentstowp .p_youtubecommentstowp__icon {
+  width: 30px;
+  border-radius: 50%;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+}
+#youtube-comments-to-wp.p_youtubecommentstowp .p_youtubecommentstowp__meta {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  line-height: 1;
+}
+#youtube-comments-to-wp.p_youtubecommentstowp .p_youtubecommentstowp__name {
+  font-size: 13px;
+  line-height: 1.6;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+#youtube-comments-to-wp.p_youtubecommentstowp .p_youtubecommentstowp__date {
+  font-size: 12px;
+  color: #767676;
+}
+#youtube-comments-to-wp.p_youtubecommentstowp .p_youtubecommentstowp__content br {
+  display: none;
+}
+#youtube-comments-to-wp.p_youtubecommentstowp .p_youtubecommentstowp__text {
+  font-size: 15px;
+  line-height: 1.6;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+#youtube-comments-to-wp.p_youtubecommentstowp .p_youtubecommentstowp__more {
+  margin-top: 3px;
+}
+#youtube-comments-to-wp.p_youtubecommentstowp .p_youtubecommentstowp__more a {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 14px;
+}
+#youtube-comments-to-wp.p_youtubecommentstowp .p_youtubecommentstowp__more a img {
+  -webkit-transform: translateY(1px);
+          transform: translateY(1px);
+  width: 19px;
+  margin-right: 5px;
+}
+#youtube-comments-to-wp.p_youtubecommentstowp .p_youtubecommentstowp__replys {
+  margin-top: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 15px;
+  padding-left: 15px;
+}
+#youtube-comments-to-wp.p_youtubecommentstowp._card {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+@media (max-width: 768px) {
+  #youtube-comments-to-wp.p_youtubecommentstowp._card {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    overflow: auto;
+    padding-bottom: 10px;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    /* Scrollbar styles */
+    /* Firefox */
+    scrollbar-width: thin;
+    scrollbar-color: #ccc #eee;
+  }
+  #youtube-comments-to-wp.p_youtubecommentstowp._card::-webkit-scrollbar {
+    height: 8px;
+    background: #eee;
+    border-radius: 4px;
+  }
+  #youtube-comments-to-wp.p_youtubecommentstowp._card::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 4px;
+  }
+  #youtube-comments-to-wp.p_youtubecommentstowp._card::-webkit-scrollbar-thumb:hover {
+    background: #b3b3b3;
+  }
+}
+#youtube-comments-to-wp.p_youtubecommentstowp._card .p_youtubecommentstowp__topcomment {
+  background: #f4f4f4;
+  padding: 20px;
+  max-width: 100%;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+}
+@media (max-width: 768px) {
+  #youtube-comments-to-wp.p_youtubecommentstowp._card .p_youtubecommentstowp__topcomment {
+    width: 260px;
+    padding: 15px;
+  }
+}
+#youtube-comments-to-wp.p_youtubecommentstowp._fukidashi {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+@media (max-width: 768px) {
+  #youtube-comments-to-wp.p_youtubecommentstowp._fukidashi {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    overflow: auto;
+    padding-bottom: 10px;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    --sb-track-color: rgba(94, 94, 94, 0.35);
+    --sb-thumb-color: #5E5E5E;
+    --sb-size: 3px;
+  }
+  #youtube-comments-to-wp.p_youtubecommentstowp._fukidashi::-webkit-scrollbar {
+    height: var(--sb-size);
+  }
+  #youtube-comments-to-wp.p_youtubecommentstowp._fukidashi::-webkit-scrollbar-track {
+    background: var(--sb-track-color);
+    border-radius: 2px;
+  }
+  #youtube-comments-to-wp.p_youtubecommentstowp._fukidashi::-webkit-scrollbar-thumb {
+    background: var(--sb-thumb-color);
+    border-radius: 2px;
+  }
+}
+#youtube-comments-to-wp.p_youtubecommentstowp._fukidashi .p_youtubecommentstowp__topcomment {
+  max-width: 100%;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+}
+@media (max-width: 768px) {
+  #youtube-comments-to-wp.p_youtubecommentstowp._fukidashi .p_youtubecommentstowp__topcomment {
+    width: 260px;
+  }
+}
+#youtube-comments-to-wp.p_youtubecommentstowp._fukidashi .p_youtubecommentstowp__content {
+  background: #f4f4f4;
+  padding: 20px;
+  position: relative;
+  margin: 20px 0 5px;
+}
+@media (max-width: 768px) {
+  #youtube-comments-to-wp.p_youtubecommentstowp._fukidashi .p_youtubecommentstowp__content {
+    padding: 15px;
+  }
+}
+#youtube-comments-to-wp.p_youtubecommentstowp._fukidashi .p_youtubecommentstowp__content:before {
+  content: "";
+  position: absolute;
+  bottom: 100%;
+  left: 5px;
+  width: 20px;
+  height: 15px;
+  clip-path: polygon(0 100%, 50% 0, 100% 100%);
+  background: #f4f4f4;
+}
+#youtube-comments-to-wp.p_youtubecommentstowp._fukidashi .p_youtubecommentstowp__more {
+  text-align: right;
+}
+#youtube-comments-to-wp.p_youtubecommentstowp._fukidashi .p_youtubecommentstowp__more a {
+  -webkit-filter: grayscale(1);
+          filter: grayscale(1);
+  opacity: 0.6;
+}
+#youtube-comments-to-wp.p_youtubecommentstowp._fukidashi2 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+@media (max-width: 768px) {
+  #youtube-comments-to-wp.p_youtubecommentstowp._fukidashi2 {
+    grid-template-columns: 1fr;
+    max-height: 50vh;
+    overflow: auto;
+    /* Scrollbar styles */
+    /* Firefox */
+    scrollbar-width: thin;
+    scrollbar-color: #ccc #eee;
+  }
+  #youtube-comments-to-wp.p_youtubecommentstowp._fukidashi2::-webkit-scrollbar {
+    height: 8px;
+    background: #eee;
+    border-radius: 4px;
+  }
+  #youtube-comments-to-wp.p_youtubecommentstowp._fukidashi2::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 4px;
+  }
+  #youtube-comments-to-wp.p_youtubecommentstowp._fukidashi2::-webkit-scrollbar-thumb:hover {
+    background: #b3b3b3;
+  }
+}
+#youtube-comments-to-wp.p_youtubecommentstowp._fukidashi2 .p_youtubecommentstowp__topcomment {
+  max-width: 100%;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+}
+@media (max-width: 768px) {
+  #youtube-comments-to-wp.p_youtubecommentstowp._fukidashi2 .p_youtubecommentstowp__topcomment {
+    position: relative;
+  }
+}
+#youtube-comments-to-wp.p_youtubecommentstowp._fukidashi2 .p_youtubecommentstowp__content {
+  background: #f4f4f4;
+  padding: 20px;
+  position: relative;
+  margin: 20px 0 5px;
+}
+@media (max-width: 768px) {
+  #youtube-comments-to-wp.p_youtubecommentstowp._fukidashi2 .p_youtubecommentstowp__content {
+    padding: 15px;
+  }
+}
+#youtube-comments-to-wp.p_youtubecommentstowp._fukidashi2 .p_youtubecommentstowp__content:before {
+  content: "";
+  position: absolute;
+  bottom: 100%;
+  left: 5px;
+  width: 20px;
+  height: 15px;
+  clip-path: polygon(0 100%, 50% 0, 100% 100%);
+  background: #f4f4f4;
+}
+@media (max-width: 768px) {
+  #youtube-comments-to-wp.p_youtubecommentstowp._fukidashi2 .p_youtubecommentstowp__text {
+    -webkit-line-clamp: 2;
+  }
+}
+#youtube-comments-to-wp.p_youtubecommentstowp._fukidashi2 .p_youtubecommentstowp__more {
+  text-align: right;
+}
+@media (max-width: 768px) {
+  #youtube-comments-to-wp.p_youtubecommentstowp._fukidashi2 .p_youtubecommentstowp__more {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+}
+#youtube-comments-to-wp.p_youtubecommentstowp._fukidashi2 .p_youtubecommentstowp__more a {
+  -webkit-filter: grayscale(1);
+          filter: grayscale(1);
+  opacity: 0.6;
+}/*# sourceMappingURL=style.css.map */
