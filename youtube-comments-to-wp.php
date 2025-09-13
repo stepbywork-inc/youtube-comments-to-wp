@@ -4,6 +4,7 @@ Plugin Name: YouTube Comments to WP
 Description: 指定したYouTubeチャンネルのコメント一覧を取得し、WordPress管理画面で表示します。
 Version: 0.2
 Author: 株式会社ステップバイワーク
+Author URI: https://sbwinc.co.jp/youtube-comments-to-wp/
 */
 
 if (!defined('ABSPATH')) exit;
