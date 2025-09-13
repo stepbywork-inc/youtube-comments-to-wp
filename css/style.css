@@ -90,7 +90,7 @@
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 5px;
-  border-left: 2px solid rgba(255, 255, 255, 0.6);
+  border-left: 2px solid rgba(0, 0, 0, 0.6);
 }
 #youtube-comments-to-wp.p_youtubecommentstowp .p_youtubecommentstowp__replys .p_youtubecommentstowp__icon {
   width: 25px;
