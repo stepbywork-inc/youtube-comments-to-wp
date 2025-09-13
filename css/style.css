@@ -169,8 +169,8 @@
   height: 15px;
   clip-path: polygon(0 100%, 50% 0, 100% 100%);
   background: #f4f4f4;
-  -webkit-transform: translateY(-1px);
-          transform: translateY(-1px);
+  -webkit-transform: translateY(1px);
+          transform: translateY(1px);
 }
 #youtube-comments-to-wp.p_youtubecommentstowp_fukidashi .p_youtubecommentstowp_fukidashi__text p {
   margin: 0;
