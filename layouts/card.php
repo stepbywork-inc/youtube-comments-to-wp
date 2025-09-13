@@ -11,7 +11,9 @@
           <span class="p_youtubecommentstowp_fukidashi__date"><?php echo esc_html(date('Y.m.d', strtotime($c['published_at']))); ?></span>
         </div>
         <div class="p_youtubecommentstowp_fukidashi__text">
-          <?php echo $c['text']; ?>
+          <p>
+            <?php echo $c['text']; ?>
+          </p>
         </div>
       </div>
       <?php if (!empty($replies[$c['comment_id']])): ?>
@@ -26,7 +28,9 @@
                 <span class="p_youtubecommentstowp_fukidashi__date"><?php echo esc_html(date('Y.m.d', strtotime($r['published_at']))); ?></span>
               </div>
               <div class="p_youtubecommentstowp_fukidashi__text">
-                <?php echo $r['text']; ?>
+                <p>
+                  <?php echo $r['text']; ?>
+                </p>
               </div>
             </div>
           <?php endforeach; ?>
