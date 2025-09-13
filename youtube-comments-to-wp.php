@@ -281,11 +281,12 @@ class YouTube_Comments_To_WP
         <table class="form-table">
           <tr valign="top">
             <th scope="row">ショートコード</th>
-            <td><input type="text" name="" value='[youtube_comments count="10" video_id="" layout="card" reply_setting="2"]' readonly size="100" />
+            <td><input type="text" name="" value='[youtube_comments count="10" video_id="" layout="card" reply_setting="2" order="desc"]'  size="100" />
           <br><span style="color:#888;">
             video_id→特定の動画だけの場合動画IDを入れる <br>
             layout→card/simple <br>
-            reply_setting→ 0:親子, 1:リプライ含めず, 2:リプライもフラット
+            reply_setting→ 0:親子, 1:リプライ含めず, 2:リプライもフラット<br>
+            order→desc:新着順, random:ランダム順
           </span>
           </td>
           </tr>

@@ -7,11 +7,14 @@ function youtube_comments_to_wp_shortcode($atts)
     'video_id' => '',
     'layout' => 'simple',
     'reply_setting' => '0', // 0:親子, 1:リプライ含めず, 2:リプライもフラット
+    'order' => 'desc', // desc:新着順, random:ランダム順
   ], $atts);
   $layout = $atts['layout'];
   $count = intval($atts['count']);
   $video_id = trim($atts['video_id']);
   $reply_setting = (string)($atts['reply_setting']);
+  $order = strtolower(trim($atts['order']));
+  $order_by = ($order === 'random') ? 'RAND()' : 'published_at DESC';
   $hidden_video_ids = get_option('youtube_comments_to_wp_hidden_video_ids', '');
   $hidden_user_ids = get_option('youtube_comments_to_wp_hidden_user_ids', '');
   $hidden_comment_ids = get_option('youtube_comments_to_wp_hidden_comment_ids', '');
@@ -44,7 +47,7 @@ function youtube_comments_to_wp_shortcode($atts)
       $params = array_merge($params, $hidden_comment_ids_arr);
     }
     $where_sql = $where ? ('WHERE ' . implode(' AND ', $where)) : '';
-    $sql = "SELECT * FROM $table_name $where_sql ORDER BY published_at DESC LIMIT %d";
+    $sql = "SELECT * FROM $table_name $where_sql ORDER BY $order_by LIMIT %d";
     $params[] = $count;
     $all_comments = $wpdb->get_results($wpdb->prepare($sql, ...$params), ARRAY_A);
   } else if ($reply_setting === '1') {
@@ -68,7 +71,7 @@ function youtube_comments_to_wp_shortcode($atts)
       $params = array_merge($params, $hidden_comment_ids_arr);
     }
     $where_sql = $where ? ('WHERE ' . implode(' AND ', $where)) : '';
-    $sql = "SELECT * FROM $table_name $where_sql ORDER BY published_at DESC LIMIT %d";
+    $sql = "SELECT * FROM $table_name $where_sql ORDER BY $order_by LIMIT %d";
     $params[] = $count;
     $all_comments = $wpdb->get_results($wpdb->prepare($sql, ...$params), ARRAY_A);
     $replies = [];
@@ -93,7 +96,7 @@ function youtube_comments_to_wp_shortcode($atts)
       $params = array_merge($params, $hidden_comment_ids_arr);
     }
     $where_sql = $where ? ('WHERE ' . implode(' AND ', $where)) : '';
-    $sql = "SELECT * FROM $table_name $where_sql ORDER BY published_at DESC LIMIT %d";
+    $sql = "SELECT * FROM $table_name $where_sql ORDER BY $order_by LIMIT %d";
     $params[] = $count;
     $all_comments = $wpdb->get_results($wpdb->prepare($sql, ...$params), ARRAY_A);
     // リプライ取得

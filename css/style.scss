@@ -1,257 +1,156 @@
+#youtube-comments-to-wp {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
 #youtube-comments-to-wp.p_youtubecommentstowp {
   .p_youtubecommentstowp {
-    &__topcomment {
-    }
-    &__item {
-    }
-    &__head {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      margin-bottom: 5px;
-      position: relative;
-    }
-    &__icon {
-      width: 30px;
-      border-radius: 50%;
-      flex-shrink: 0;
-    }
-    &__meta {
-      display: flex;
-      flex-direction: column;
-      line-height: 1;
-    }
-    &__name {
-      font-size: 13px;
-      line-height: 1.6;
-      display: -webkit-box;
-      -webkit-line-clamp: 1;
-      -webkit-box-orient: vertical;
-      overflow: hidden;
-      font-weight: bold;
-      margin-bottom: 4px;
-    }
-    &__date {
-      font-size: 12px;
-      color: #767676;
-    }
-    &__content {
-      br {
+    &__link {
+      position: absolute;
+      z-index: 1;
+      inset: 0;
+      &:after {
         display: none;
       }
     }
-    &__text {
-      font-size: 15px;
-      line-height: 1.6;
-      display: -webkit-box;
-      -webkit-line-clamp: 4;
-      -webkit-box-orient: vertical;
-      overflow: hidden;
-    }
-    &__more {
-      margin-top: 3px;
-      a {
-        display: inline-flex;
-        align-items: center;
-        font-size: 14px;
-        img {
-          transform: translateY(1px);
-          width: 19px;
-          margin-right: 5px;
-        }
+    &__row {
+      display: flex;
+      gap: 5px;
+      flex-direction: column;
+      align-items: flex-start;
+      text-decoration: none;
+      &:after {
+        display: none;
       }
     }
-    &__replys {
-      margin-top: 20px;
+    &__toplevel {
       display: flex;
-      flex-direction: column;
-      gap: 15px;
-      padding-left: 15px;
+      gap: 16px;
+      align-items: flex-start;
     }
-    &__item {
+    &__thumb {
+      margin-left: auto;
+      width: 120px;
+      height: auto;
+      flex-shrink: 0;
     }
-    &__head {
+    &__comment {
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
     }
     &__icon {
-    }
-    &__meta {
-    }
-    &__name {
-    }
-    &__date {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      flex-shrink: 0;
     }
     &__content {
     }
-  }
-  &._card {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-    @media (max-width: 768px) {
+    &__meta {
+      font-size: 13px;
+      margin-bottom: 3px;
+    }
+    &__author {
+    }
+    &__date {
+      opacity: 0.6;
+    }
+    &__text {
+      font-size: 13px;
+      line-height: 1.6;
+    }
+    &__replys {
       display: flex;
-      overflow: auto;
-      padding-bottom: 10px;
-      flex-wrap: nowrap;
-      /* Scrollbar styles */
-      &::-webkit-scrollbar {
-        height: 8px;
-        background: #eee;
-        border-radius: 4px;
-      }
-      &::-webkit-scrollbar-thumb {
-        background: #ccc;
-        border-radius: 4px;
-      }
-      &::-webkit-scrollbar-thumb:hover {
-        background: #b3b3b3;
-      }
-      /* Firefox */
-      scrollbar-width: thin;
-      scrollbar-color: #ccc #eee;
-    }
-    .p_youtubecommentstowp {
-      &__topcomment {
-        background: #f4f4f4;
-        padding: 20px;
-        max-width: 100%;
-        flex-shrink: 0;
-        @media (max-width: 768px) {
-          width: 260px;
-          padding: 15px;
-        }
+      flex-direction: column;
+      gap: 5px;
+      border-left: 2px solid rgba($color: white, $alpha: 0.6);
+      .p_youtubecommentstowp__icon {
+        width: 25px;
+        height: 25px;
+        margin-left: 15px;
       }
     }
   }
-  &._fukidashi {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-    @media (max-width: 768px) {
+}
+#youtube-comments-to-wp.p_youtubecommentstowp_fukidashi {
+  .p_youtubecommentstowp_fukidashi {
+    &__link {
+      position: absolute;
+      z-index: 1;
+      inset: 0;
+      &:after {
+        display: none;
+      }
+    }
+    &__row {
       display: flex;
-      overflow: auto;
-      padding-bottom: 10px;
-      flex-wrap: nowrap;
-      --sb-track-color: rgba(94, 94, 94, 0.35);
-      --sb-thumb-color: #5E5E5E;
-      --sb-size: 3px;
-
-      &::-webkit-scrollbar {
-        height: var(--sb-size);
-      }
-
-      &::-webkit-scrollbar-track {
-        background: var(--sb-track-color);
-        border-radius: 2px;
-      }
-
-      &::-webkit-scrollbar-thumb {
-        background: var(--sb-thumb-color);
-        border-radius: 2px;
+      gap: 5px;
+      flex-direction: column;
+      align-items: flex-start;
+      text-decoration: none;
+      &:after {
+        display: none;
       }
     }
-    .p_youtubecommentstowp {
-      &__topcomment {
-        max-width: 100%;
-        flex-shrink: 0;
-        @media (max-width: 768px) {
-          width: 260px;
-        }
-      }
-      &__content {
+    &__comment {
+      display: flex;
+      flex-direction: column;
+    }
+    &__meta {
+      font-size: 13px;
+      margin-bottom: 3px;
+      display: grid;
+      grid-template-columns: auto 1fr;
+      align-items: center;
+    }
+    &__icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      flex-shrink: 0;
+      margin-right: 16px;
+      grid-row: span 2;
+    }
+    &__author {
+    }
+    &__date {
+      opacity: 0.6;
+    }
+    &__text {
+      font-size: 13px;
+      line-height: 1.6;
+      background: #f4f4f4;
+      padding: 15px;
+      position: relative;
+      margin: 20px 0 5px;
+      color: black;
+      &:before {
+        content: "";
+        position: absolute;
+        bottom: 100%;
+        left: 10px;
+        width: 20px;
+        height: 15px;
+        clip-path: polygon(0 100%, 50% 0, 100% 100%);
         background: #f4f4f4;
-        padding: 20px;
-        position: relative;
-        margin: 20px 0 5px;
-        @media (max-width: 768px) {
-          padding: 15px;
-        }
-        &:before {
-          content: "";
-          position: absolute;
-          bottom: 100%;
-          left: 5px;
-          width: 20px;
-          height: 15px;
-          clip-path: polygon(0 100%, 50% 0, 100% 100%);
-          background: #f4f4f4;
-        }
-      }
-      &__more {
-        text-align: right;
-        a {
-          filter: grayscale(1);
-          opacity: 0.6;
-        }
+        transform: translateY(-1px);
       }
     }
-  }
-  &._fukidashi2 {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-    @media (max-width: 768px) {
-      grid-template-columns: 1fr;
-      max-height: 50vh;
-      overflow: auto;
-      /* Scrollbar styles */
-      &::-webkit-scrollbar {
-        height: 8px;
-        background: #eee;
-        border-radius: 4px;
+    &__replys {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      .p_youtubecommentstowp_fukidashi__icon {
+        width: 25px;
+        height: 25px;
+        margin-left: 15px;
       }
-      &::-webkit-scrollbar-thumb {
-        background: #ccc;
-        border-radius: 4px;
-      }
-      &::-webkit-scrollbar-thumb:hover {
-        background: #b3b3b3;
-      }
-      /* Firefox */
-      scrollbar-width: thin;
-      scrollbar-color: #ccc #eee;
-    }
-    .p_youtubecommentstowp {
-      &__topcomment {
-        max-width: 100%;
-        flex-shrink: 0;
-        @media (max-width: 768px) {
-          position: relative;
-        }
-      }
-      &__content {
-        background: #f4f4f4;
-        padding: 20px;
-        position: relative;
-        margin: 20px 0 5px;
-        @media (max-width: 768px) {
-          padding: 15px;
-        }
+      .p_youtubecommentstowp_fukidashi__text {
+        margin-left: 15px;
         &:before {
-          content: "";
-          position: absolute;
-          bottom: 100%;
-          left: 5px;
-          width: 20px;
-          height: 15px;
-          clip-path: polygon(0 100%, 50% 0, 100% 100%);
-          background: #f4f4f4;
-        }
-      }
-      &__text {
-        @media (max-width: 768px) {
-          -webkit-line-clamp: 2;
-        }
-      }
-      &__more {
-        text-align: right;
-        @media (max-width: 768px) {
-          position: absolute;
-          top: 0;
-          right: 0;
-        }
-        a {
-          filter: grayscale(1);
-          opacity: 0.6;
+          left: 0;
         }
       }
     }
