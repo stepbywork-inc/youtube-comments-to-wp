@@ -75,9 +75,11 @@
 #youtube-comments-to-wp.p_youtubecommentstowp .p_youtubecommentstowp__date {
   opacity: 0.6;
 }
-#youtube-comments-to-wp.p_youtubecommentstowp .p_youtubecommentstowp__text {
+#youtube-comments-to-wp.p_youtubecommentstowp .p_youtubecommentstowp__text p {
   font-size: 13px;
   line-height: 1.6;
+  margin: 0;
+  padding: 0;
 }
 #youtube-comments-to-wp.p_youtubecommentstowp .p_youtubecommentstowp__replys {
   display: -webkit-box;
@@ -153,13 +155,10 @@
   opacity: 0.6;
 }
 #youtube-comments-to-wp.p_youtubecommentstowp_fukidashi .p_youtubecommentstowp_fukidashi__text {
-  font-size: 13px;
-  line-height: 1.6;
   background: #f4f4f4;
   padding: 15px;
   position: relative;
   margin: 20px 0 5px;
-  color: black;
 }
 #youtube-comments-to-wp.p_youtubecommentstowp_fukidashi .p_youtubecommentstowp_fukidashi__text:before {
   content: "";
@@ -172,6 +171,13 @@
   background: #f4f4f4;
   -webkit-transform: translateY(-1px);
           transform: translateY(-1px);
+}
+#youtube-comments-to-wp.p_youtubecommentstowp_fukidashi .p_youtubecommentstowp_fukidashi__text p {
+  margin: 0;
+  padding: 0;
+  font-size: 13px;
+  line-height: 1.6;
+  color: black;
 }
 #youtube-comments-to-wp.p_youtubecommentstowp_fukidashi .p_youtubecommentstowp_fukidashi__replys {
   display: -webkit-box;
